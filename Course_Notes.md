@@ -28,3 +28,12 @@ These are my notes as I worked through the [Pandas Cookbook](https://github.com/
  * To count number of occurences of a value in a column and sort by frequency, use `_DataframeName_[_ColumnName_].value_counts()`.
 
 * [Chapter 3: Which borough has the most noise complaints? (or, more selecting data)](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%203%20-%20Which%20borough%20has%20the%20most%20noise%20complaints%20%28or%2C%20more%20selecting%20data%29.ipynb)
+ * To filter based on a column value(s), use `_DataframeName_[_criteria_]` 
+ where `_criteria_` is for e.g. `_DataframeName_[_ColumnName1_] == _value1_ & _DataframeName_[_ColumnName1_] == _value2_` 
+ i.e. a boolean array.
+ * The above can be used in conjunction with column and row selection to see a specific subset of the data.
+ * The type of a dataframe column is a pandas series, which internally is a numpy array.
+ * Selecting elements based on a condition works for numpy arrays as well.
+ * One can divide a value count by another (element wise) by using the division operator i.e. `/`.
+
+* [Chapter 4: Find out on which weekday people bike the most with groupby and aggregate](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%204%20-%20Find%20out%20on%20which%20weekday%20people%20bike%20the%20most%20with%20groupby%20and%20aggregate.ipynb)
