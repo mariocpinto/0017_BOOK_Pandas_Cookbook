@@ -27,6 +27,8 @@ These are my notes as I worked through the [Pandas Cookbook](https://github.com/
  * To select multiple clumns, use `_DataframeName_[ [ _ColumnName1_, _ColumnName2_, ... ] ]`.
  * To count number of occurences of a value in a column and sort by frequency, use `_DataframeName_[_ColumnName_].value_counts()`.
 
+<br>
+
 * [Chapter 3: Which borough has the most noise complaints? (or, more selecting data)](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%203%20-%20Which%20borough%20has%20the%20most%20noise%20complaints%20%28or%2C%20more%20selecting%20data%29.ipynb)
  * To filter based on a column value(s), use `_DataframeName_[_criteria_]` 
  where `_criteria_` is for e.g. `_DataframeName_[_ColumnName1_] == _value1_ & _DataframeName_[_ColumnName1_] == _value2_` 
@@ -36,4 +38,15 @@ These are my notes as I worked through the [Pandas Cookbook](https://github.com/
  * Selecting elements based on a condition works for numpy arrays as well.
  * One can divide a value count by another (element wise) by using the division operator i.e. `/`.
 
+<br>
+
 * [Chapter 4: Find out on which weekday people bike the most with groupby and aggregate](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%204%20-%20Find%20out%20on%20which%20weekday%20people%20bike%20the%20most%20with%20groupby%20and%20aggregate.ipynb)
+ * To copy a dataframe or a subset, use the `.copy()` method.
+ * To get the index of a dataframe use `_DataFrameName_.index`.
+ * To get the day of the month and weekday corresponding to a date, use `.day` and `.weekday`.
+ * Data can be grouped and aggregated using the `_DataframeName_.groupby(_ColumnName_).aggregate(sum)`.
+ * A dataframe index can be overwritten with a new list.
+
+<br>
+
+
