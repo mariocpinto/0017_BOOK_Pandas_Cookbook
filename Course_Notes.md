@@ -96,7 +96,17 @@ These are my notes as I worked through the [Pandas Cookbook](https://github.com/
 <br>
 
 * [Chapter 9 - Loading data from SQL databases](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%209%20-%20Loading%20data%20from%20SQL%20databases.ipynb)
-
-
+ * To read in a database directly as a pandas object, use `.read_sql(_SELECT statement_, _ConnectionObject_).
+ e.g.
+ ```python
+ con = sqlite3.connect("../data/weather_2012.sqlite")
+ df = pd.read_sql("SELECT * from weather_2012 LIMIT 3", con)
+ ```
+ * To set the primary key (id) to one of the columns of the sql database, 
+ use the `index_col=_ColumnName_` as a keyword with `read_sql`.
+ It is also possible to pass multiple columns as an id, by passing an list of the column names.
+ * To write a dataframe to sql, use `.to_sql()`.
+ * One can read from / write to many other formats. The [documentation](http://pandas.pydata.org/pandas-docs/stable/io.html) provides more details.
+ 
 <br>
 
