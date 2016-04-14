@@ -31,7 +31,7 @@ These are my notes as I worked through the [Pandas Cookbook](https://github.com/
 
 * [Chapter 3: Which borough has the most noise complaints? (or, more selecting data)](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%203%20-%20Which%20borough%20has%20the%20most%20noise%20complaints%20%28or%2C%20more%20selecting%20data%29.ipynb)
  * To filter based on a column value(s), use `_DataframeName_[_criteria_]` 
- where `_criteria_` is for e.g. `_DataframeName_[_ColumnName1_] == _value1_ & _DataframeName_[_ColumnName1_] == _value2_` 
+ where `_criteria_` is for e.g. `_DataframeName_[_ColumnName1_] == _value1_ & _DataframeName_[_ColumnName2_] == _value2_` 
  i.e. a boolean array.
  * The above can be used in conjunction with column and row selection to see a specific subset of the data.
  * The type of a dataframe column is a pandas series, which internally is a numpy array.
@@ -53,12 +53,24 @@ These are my notes as I worked through the [Pandas Cookbook](https://github.com/
  * To get rid of rows/columns with missing data, use `dropna()` with appropriate keywords.
  * To get rid of rows/columns, use `drop()` with appropriate keywords.
  * Lots of neat formatting of strings can be done with `.format()`. More [here](https://pyformat.info/).
- * To concatenate data frames, use `.concat(_ListofDataframes_)`
+ * To concatenate data frames, use `.concat(_ListofDataframes_)`. This will concatenate along rows i.e. one under another.
+ To concatenate along columns i.e. add columns, add the keyword `axis=1`.
  * To save a dataframe to a csv, use the `.to_csv(_FileName_)` command.
 
 <br>
 
-
+* [Chapter 6: String operations! Which month was the snowiest?](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%206%20-%20String%20Operations-%20Which%20month%20was%20the%20snowiest.ipynb)
+ * To know if entries in a column contain a particular word, use `_DataframeName_[_ColumnName_].str.contains(_SearchString_)`.
+ * To make matplotlib plots look prettier, use `matplotlib.pyplot.style.use(_StyleName_)`. Exaples of different style types can be found [here](https://tonysyu.github.io/raw_content/matplotlib-style-gallery/gallery.html).
+ To print a list of available styles, use `print plt.style.available`.
+ * If we have a time series, the `resample()` method can be used to calculate parameters defined on chunks of data
+ ([documentation](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.resample.html)).
+ The chunking is defined by the `rule` keyword which takes a string input. Possible values of `rule` are listed [here](http://pandas.pydata.org/pandas-docs/stable/timeseries.html#offset-aliases).
+ To define the function to be applied on the cheunks, use `apply(_NumpyMethod_)`.
+ * To cast elements of a column to a new type, use `.astype(_NewType_)`.
+ * To name a dataframe column with a new column name, use `_DataframeName_[_ColumnName_].name = _NewName_`.
+ * To plot multiple columns of a dataframe as separate plots, use the `subplots=True` keyword.
 
 <br>
+
 
