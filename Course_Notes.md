@@ -45,8 +45,20 @@ These are my notes as I worked through the [Pandas Cookbook](https://github.com/
  * To get the index of a dataframe use `_DataFrameName_.index`.
  * To get the day of the month and weekday corresponding to a date, use `.day` and `.weekday`.
  * Data can be grouped and aggregated using the `_DataframeName_.groupby(_ColumnName_).aggregate(sum)`.
- * A dataframe index can be overwritten with a new list.
+ * A dataframe index can be overwritten with a new list. Same with the column headers (Set `.columns` to the new list).
 
 <br>
 
+* [Chapter 5: Combining dataframes and scraping Canadian weather data](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%205%20-%20Combining%20dataframes%20and%20scraping%20Canadian%20weather%20data.ipynb)
+ * To get rid of rows/columns with missing data, use `dropna()` with appropriate keywords.
+ * To get rid of rows/columns, use `drop()` with appropriate keywords.
+ * Lots of neat formatting of strings can be done with `.format()`. More [here](https://pyformat.info/).
+ * To concatenate data frames, use `.concat(_ListofDataframes_)`
+ * To save a dataframe to a csv, use the `.to_csv(_FileName_)` command.
+
+<br>
+
+
+
+<br>
 
