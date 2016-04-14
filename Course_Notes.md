@@ -73,4 +73,18 @@ These are my notes as I worked through the [Pandas Cookbook](https://github.com/
 
 <br>
 
+* [Chapter 7: Cleaning up messy data](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%207%20-%20Cleaning%20up%20messy%20data.ipynb)
+ * To find a list of unique entries in a Series, use `.unique()`. It might also help to use this in combination with sorted().
+ * To clean up NA values while importing data using read_csv,
+ create an array of elements that are to be considered NaNs and pass it along with the `na_values` keyword.
+ * To specify the data type of a particular column, create a dictionary with key:column name and value:type
+ and pass this along with the `dtype` keyword.
+ * To find all string entries whose length exceeds a certain length, use `.str.len() > _number_`.
+ * To truncate / slice string entries, use `.str.slice(_StartingIndex-included_, _EndingIndex-Excluded_)`.
+ * To set an element to NaN, set it equal to `numpy.nan`.
+ * To find string elements starting with a specific set of characters, use `str.startswith(_StartingSequence_)`.
+ * To find if entries of a column are not NaNs, use `.notnull()`.
+
+<br>
+
 
