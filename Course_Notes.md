@@ -87,4 +87,16 @@ These are my notes as I worked through the [Pandas Cookbook](https://github.com/
 
 <br>
 
+* [Chapter 8: Parsing Unix timestamps](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%208%20-%20How%20to%20deal%20with%20timestamps.ipynb)
+ * To filter out a particular subset of a pandas datetime series, you can write the criteria in terms of strings.
+ To clarify: e.g. `popcon['atime'] > '1970-01-01'`.
+ * If you have a timestamp in seconds or milliseconds or nanoseconds, then you can just "cast" it to a 'datetime64[the-right-thing]'
+ using the `to_datetime()` method (with appropriate parameters) and pandas/numpy will take care of the rest.
+
+<br>
+
+* [Chapter 9 - Loading data from SQL databases](http://nbviewer.ipython.org/github/jvns/pandas-cookbook/blob/master/cookbook/Chapter%209%20-%20Loading%20data%20from%20SQL%20databases.ipynb)
+
+
+<br>
 
