@@ -108,5 +108,9 @@ These are my notes as I worked through the [Pandas Cookbook](https://github.com/
  * To write a dataframe to sql, use `.to_sql()`.
  * One can read from / write to many other formats. The [documentation](http://pandas.pydata.org/pandas-docs/stable/io.html) provides more details.
  
-<br>
+#### Concluding Remarks:
+Working through the Pandas Cookbook was my first real foray into Pandas and IPython / Jupyter notebooks.
+This book/tutorial provides a hands-on introduction to Pandas and provides a taste of a number of topics in a short time.
+It has left me asking for more :).
+I would recommend this to anyone looking for a beginner pandas tutorial - I believe it is an efficient way of getting started with Pandas.
 
